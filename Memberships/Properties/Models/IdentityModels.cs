@@ -31,7 +31,5 @@ namespace Memberships.Models
             return new ApplicationDbContext();
         }
         public DbSet<Section> Sections { get; set; }
-        public DbSet<Part> Parts { get; set; }
-        public DbSet<ItemType> ItemTypes { get; set; }
     }
 } 
