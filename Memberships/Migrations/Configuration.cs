@@ -10,11 +10,6 @@ namespace Memberships.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-
-            ///<summary>
-            ///Should be used so that it tells the program I am not okay with data loss and should be false
-            ///but for this program i set it to true 
-            ///</summary>
             AutomaticMigrationDataLossAllowed = true;
         }
 
