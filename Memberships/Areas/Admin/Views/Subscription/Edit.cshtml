@@ -1,5 +1,4 @@
-﻿@model Memberships.Areas.Admin.Models.ProductModel
-@using Memberships.Extensions
+﻿@model Memberships.Entities.Subscription
 
 @{
     ViewBag.Title = "Edit";
@@ -7,14 +6,17 @@
 
 <h2>Edit</h2>
 
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-
+    
     <div class="form-horizontal">
-        <h4>Product</h4>
+        <h4>Subscription</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
         <div class="form-group">
             @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -32,27 +34,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ImageUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.RegistrationCode, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ImageUrl, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ImageUrl, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ProductTypes, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.ProductTypeId, Model.ProductTypes.ToSelectListItem(Model.ProductTypeId), new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ProductTypeId, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ProductLinkTexts, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.ProductLinktTextId, Model.ProductLinkTexts.ToSelectListItem(Model.ProductLinktTextId), new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ProductLinktTextId, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.RegistrationCode, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RegistrationCode, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -62,9 +47,12 @@
             </div>
         </div>
     </div>
-
 }
 
 <div>
     @Html.Partial("_BackToListButtonPartial")
 </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
