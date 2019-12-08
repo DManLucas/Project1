@@ -199,7 +199,9 @@
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Part.cs" />
     <Compile Include="Entities\Section.cs" />
+    <Compile Include="Extensions\HttpContectExtensions.cs" />
     <Compile Include="Extensions\ICollectionExtensions.cs" />
+    <Compile Include="Extensions\IdentityExtensions.cs" />
     <Compile Include="Extensions\RefflectionExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -208,6 +210,11 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ThumbnailAreaModel.cs" />
+    <Compile Include="Models\ThumbnailModel.cs" />
+    <Compile Include="Models\UserSubscriptionModel.cs" />
+    <Compile Include="Models\UserSubscriptionViewModel.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -219,6 +226,8 @@
     <Content Include="Content\Images\Coming soon.gif" />
     <Content Include="Content\Logos\Luminous-Lucaas Logo.png" />
     <Content Include="Content\Logos\Luminous-Lucaas-favicon.png" />
+    <Content Include="Content\navbar.css" />
+    <Content Include="Content\thumbnails.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -236,11 +245,11 @@
     <Content Include="Areas\Admin\Views\Section\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Section\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Section\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_BackToListButtonPartial.cshtml" />
+    <Content Include="Views\Shared\_BackToListButtonPartial.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_EditButtonPartial.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_CreateButtonPartial.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_SmallButtonPartial.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_TableButtonsPartial.cshtml" />
+    <Content Include="Views\Shared\_CreateButtonPartial.cshtml" />
+    <Content Include="Views\Shared\_SmallButtonPartial.cshtml" />
+    <Content Include="Views\Shared\_TableButtonsPartial.cshtml" />
     <Content Include="Areas\Admin\Views\Part\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Part\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Part\Delete.cshtml" />
@@ -333,6 +342,12 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_AdminMenuPartial.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Account\Delete.cshtml" />
+    <Content Include="Views\Account\Subscriptions.cshtml" />
+    <Content Include="Views\Shared\_ThumbnailAreaPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

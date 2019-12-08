@@ -13,9 +13,12 @@
        Id = Model.Id,
        ItemId = Model.ItemId,
        ProductId = Model.ProductId,
-       SubscriptionId = Model.SubscriptionId
+       SubscriptionId = Model.SubscriptionId,
+       UserId = Model.UserId
    })
 
+        @if (Model.UserId != null && Model.UserId.Equals(String.Empty))
+        {
         @Html.Partial("_SmallButtonPartial", new SmallButtonModel
    {
        Action = "Details",
@@ -25,8 +28,26 @@
        Id = Model.Id,
        ItemId = Model.ItemId,
        ProductId = Model.ProductId,
-       SubscriptionId = Model.SubscriptionId
+       SubscriptionId = Model.SubscriptionId,
+       UserId = Model.UserId
    })
+        }
+
+        @if (Model.UserId != null && !Model.UserId.Equals(String.Empty))
+        {
+            @Html.Partial("_SmallButtonPartial", new SmallButtonModel
+       {
+           Action = "Subscriptions",
+           ButtonType = "btn-info",
+           Glyph = "list",
+           Text = "Subscriptions",
+           Id = Model.Id,
+           ItemId = Model.ItemId,
+           ProductId = Model.ProductId,
+           SubscriptionId = Model.SubscriptionId,
+           UserId = Model.UserId
+       })
+        }
 
         @Html.Partial("_SmallButtonPartial", new SmallButtonModel
    {
@@ -37,7 +58,8 @@
        Id = Model.Id,
        ItemId = Model.ItemId,
        ProductId = Model.ProductId,
-       SubscriptionId = Model.SubscriptionId
+       SubscriptionId = Model.SubscriptionId,
+       UserId = Model.UserId
    })
     </div>
 </td>
